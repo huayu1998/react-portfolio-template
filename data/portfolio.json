@@ -1,1 +1,161 @@
-{"name":"Chetan","headerTaglineOne":"Hello 👋","headerTaglineTwo":"I'm Chetan Verma - curious","headerTaglineThree":"designer and devloper","headerTaglineFour":" based in New Delhi, India.","showCursor":true,"showBlog":true,"darkMode":true,"showResume":true,"socials":[{"id":"1","title":"Github","link":"https://github.com/chetanverma16"},{"id":"2","title":"LinkedIn","link":"https://www.linkedin.com/in/chetanverma7/"},{"id":"3","title":"Twitter","link":"https://twitter.com/realchetanverma"},{"id":"4","title":"Blog","link":"https://blog.chetanverma.com/"},{"id":"5","title":"Email","link":"mailto:hello@chetanverma.com"}],"projects":[{"id":"1","title":"Project One Test","description":"Web Design","imageSrc":"https://images.unsplash.com/photo-1487837647815-bbc1f30cd0d2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Njl8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60","url":"http://chetanverma.com/"},{"id":"2","title":"Project Two","description":"Web Development","imageSrc":"https://images.unsplash.com/photo-1605153864431-a2795a1b2f95?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwyNTY3ODl8fGVufDB8fHw%3D&auto=format&fit=crop&w=400&q=60","url":"http://chetanverma.com/"},{"id":"3","title":"Project Three","description":"Design","imageSrc":"https://images.unsplash.com/photo-1504083898675-c896ecdae86e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjJ8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60","url":"http://chetanverma.com/"},{"id":"4","title":"Project Four","description":"Marketing","imageSrc":"https://images.unsplash.com/photo-1492171983775-a51717616c0d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NjB8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60","url":"http://chetanverma.com/"},{"id":"5","title":"Project Five","description":"Development","imageSrc":"https://images.unsplash.com/photo-1534239143101-1b1c627395c5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NzZ8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60","url":"http://chetanverma.com/"},{"id":"6","title":"Project Six","description":"Design & Development","imageSrc":"https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTAyfHxwYXN0ZWx8ZW58MHx8MHw%3D&auto=format&fit=crop&w=400&q=60","url":"http://chetanverma.com/"}],"services":[{"id":"1","title":"Art Direction","description":"We help with the creation and development of online advertising ideas, with particular focus on their visual appearance."},{"id":"2","title":"Branding","description":"We design key brand elements such as the logo, color scheme, typography, and other design components that makes your brand stand out from competitors."},{"id":"3","title":"Web Design","description":"We build and optimize your online presence.  Website is the digital entry point into your business and a powerful revenue channel."},{"id":"4","title":"3D Design","description":"We combine creative design and technical skills to build striking 3D visualisations that bring your project to life."}],"aboutpara":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.","resume":{"tagline":"👋  I'm a software engineer, product designer.","description":"I have delivered world-class user experiences to millions of people. Well-versed with React, Javascript, and most of the Web frameworks.","experiences":[{"id":"1","dates":"March 2022 - Present","type":"Full Time","position":"Frontend Engineer at X","bullets":"Bullet One, Bullet Two"},{"id":"d495c23b-4f65-479a-9b8a-cfbc1c089725","dates":"July 2020 - March 2022","type":"Full Time","position":"Frontend Engineer at X","bullets":"Worked on the frontend of a React application, Worked on the frontend of a React application"}],"education":{"universityName":"University X","universityDate":"2016-2020","universityPara":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"},"languages":["Javascript","HTML5","CSS","Python","Go"],"frameworks":["React","Typescript","NodeJs"],"others":["Figma","AdobeXD","AWS"]}}
+{
+    "name": "Sophia",
+    "headerTaglineOne": "Hello 👋",
+    "headerTaglineTwo": "I'm Sophia Carter - passionate",
+    "headerTaglineThree": "SE researcher & Grad student",
+    "headerTaglineFour": "based in Blacksburg, VA US",
+    "showCursor": true,
+    "showBlog": true,
+    "darkMode": true,
+    "showResume": true,
+    "socials": [
+        {
+            "id": "1",
+            "title": "Github",
+            "link": "https://github.com/huayu1998"
+        },
+        {
+            "id": "2",
+            "title": "LinkedIn",
+            "link": "https://www.linkedin.com/in/huayu-liang-1998hl/"
+        },
+        {
+            "id": "3",
+            "title": "Scholar",
+            "link": "https://scholar.google.com/citations?user=sDeXtmEAAAAJ&hl=en&oi=ao"
+        },
+        {
+            "id": "4",
+            "title": "Blog",
+            "link": "http://localhost:3000/blog"
+        },
+        {
+            "id": "5",
+            "title": "Email",
+            "link": "mailto:huayu98@vt.edu"
+        }
+    ],
+    "projects": [
+        {
+            "id": "1",
+            "title": "AI-Powered Resume Analyzer",
+            "description": "A tool that leverages natural language processing to extract and analyze key information from resumes, providing insights for recruiters and job seekers.",
+            "imageSrc": "https://images.unsplash.com/photo-1693045181178-d5d83fb070c8?ixid=M3w4MjcwNjd8MHwxfHNlYXJjaHwzfHxSZXN1bWUlMjBBbmFseXplcnxlbnwwfHx8fDE3NzQ1ODQwMDd8MA&ixlib=rb-4.1.0&fit=max&q=80",
+            "url": "https://www.google.com/"
+        },
+        {
+            "id": "2",
+            "title": "Scalable Chatbot Framework",
+            "description": "A highly scalable chatbot framework designed to handle over 1 million concurrent users, built with Node.js and integrated with GPT-based models.",
+            "imageSrc": "https://images.unsplash.com/photo-1659018966834-99be9746b49e?ixid=M3w4MjcwNjd8MHwxfHNlYXJjaHw0fHxjaGF0Ym90fGVufDB8fHx8MTc3NDU4NDA0OHww&ixlib=rb-4.1.0&fit=max&q=80",
+            "url": "https://www.google.com/"
+        },
+        {
+            "id": "3",
+            "title": "Smart Expense Tracker",
+            "description": "A web application that uses machine learning to categorize expenses and provide personalized financial insights for users.",
+            "imageSrc": "https://images.unsplash.com/photo-1717163055722-dfd7e12e62c9?ixid=M3w4MjcwNjd8MHwxfHNlYXJjaHw0fHxleHBlbnNlJTIwdHJhY2tlcnxlbnwwfHx8fDE3NzQ1ODQwNzZ8MA&ixlib=rb-4.1.0&fit=max&q=80",
+            "url": "https://www.google.com/"
+        },
+        {
+            "id": "4",
+            "title": "NLP-Powered Sentiment Analysis Tool",
+            "description": "A sentiment analysis platform that processes user reviews and social media data to provide actionable insights for businesses.",
+            "imageSrc": "https://images.unsplash.com/photo-1587483166702-bf9aa66bd791?ixid=M3w4MjcwNjd8MHwxfHNlYXJjaHw0fHxlbW90aW9uc3xlbnwwfHx8fDE3NzQ1ODQxMjZ8MA&ixlib=rb-4.1.0&fit=max&q=80",
+            "url": "https://www.google.com/"
+        },
+        {
+            "id": "5",
+            "title": "Real-Time Collaboration Platform",
+            "description": "A real-time collaboration tool for teams, featuring live document editing, video calls, and task management.",
+            "imageSrc": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixid=M3w4MjcwNjd8MHwxfHNlYXJjaHw3fHxzdHVkeXxlbnwwfHx8fDE3NzQ1ODQyNTB8MA&ixlib=rb-4.1.0&fit=max&q=80",
+            "url": "https://www.google.com/"
+        },
+        {
+            "id": "6",
+            "title": "Personalized Learning Recommendation System",
+            "description": "A recommendation system that uses AI to suggest personalized learning paths based on user preferences and progress.",
+            "imageSrc": "https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixid=M3w4MjcwNjd8MHwxfHNlYXJjaHwxMXx8c3R1ZHl8ZW58MHx8fHwxNzc0NTg0MjUwfDA&ixlib=rb-4.1.0&fit=max&q=80",
+            "url": "https://www.google.com/"
+        },
+        {
+            "id": "dc1d92fb-c012-4a8f-b512-2ca966aa7446",
+            "title": "Next.js Financial Dashboard",
+            "description": "Web application built upon React-based Next.js framework; works include: implement an app for users to track the financial invoices, including visualizing the data, creating, reading, updating, and deleting (CRUD) invoices, etc; and create the database using the Neon database in Next.js from Vercel and deploy the app using Vercel",
+            "imageSrc": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixid=M3w4MjcwNjd8MHwxfHNlYXJjaHwxfHxmaW5hbmNpYWwlMjBkYXNoYm9hcmR8ZW58MHx8fHwxNzc0NTg0NDI3fDA&ixlib=rb-4.1.0&fit=max&q=80",
+            "url": "https://nextjs-dashboard-gamma-lilac-on47fgg3xy.vercel.app/dashboard"
+        }
+    ],
+    "services": [
+        {
+            "id": "1",
+            "title": "Art Direction",
+            "description": "We help with the creation and development of online advertising ideas, with particular focus on their visual appearance."
+        },
+        {
+            "id": "2",
+            "title": "Branding",
+            "description": "We design key brand elements such as the logo, color scheme, typography, and other design components that makes your brand stand out from competitors."
+        },
+        {
+            "id": "3",
+            "title": "Web Design",
+            "description": "We build and optimize your online presence. Website is the digital entry point into your business and a powerful revenue channel."
+        },
+        {
+            "id": "4",
+            "title": "3D Design",
+            "description": "We combine creative design and technical skills to build striking 3D visualisations that bring your project to life."
+        },
+        {
+            "id": "1550efb6-b9d7-4167-8a14-a02b2e023f1a",
+            "title": "New Service",
+            "description": "Add a new service for testing purposes."
+        }
+    ],
+    "aboutpara": "Hi, I'm Sophia Carter, a senior graduate student in Computer Science with a strong foundation in software engineering and a passion for artificial intelligence and machine learning. Over the past 5 years, I have worked at Amazon and Google, where I contributed to building scalable systems, optimizing machine learning pipelines, and delivering impactful solutions.",
+    "resume": {
+        "tagline": "👋  I'm a software engineer, PhD student, and a researcher",
+        "description": "Hi, I'm Sophia Carter, a senior graduate student in Computer Science with a strong foundation in software engineering and a passion for artificial intelligence and machine learning. Over the past 5 years, I have worked at Amazon and Google, where I contributed to building scalable systems, optimizing machine learning pipelines, and delivering impactful solutions.",
+        "experiences": [
+            {
+                "id": "1",
+                "dates": "March 2024 - Present",
+                "type": "Part Time",
+                "position": "Junior Software Engineer in Google",
+                "bullets": "Designed and implemented scalable machine learning pipelines for NLP applications. Improved model inference speed by 30% through optimization techniques. Collaborated with cross-functional teams to deliver AI-driven solutions."
+            },
+            {
+                "id": "d495c23b-4f65-479a-9b8a-cfbc1c089725",
+                "dates": "July 2020 - March 2022",
+                "type": "Full Time",
+                "position": "Frontend Engineer and Designer at Meta",
+                "bullets": "Developed and maintained backend services for high-traffic e-commerce platforms. Enhanced system reliability by implementing fault-tolerant architectures. Mentored junior engineers and conducted code reviews."
+            }
+        ],
+        "education": {
+            "universityName": "Virginia Tech",
+            "universityDate": "2023-Present",
+            "universityPara": "PhD in Computer Science"
+        },
+        "languages": [
+            "Javascript",
+            "HTML5",
+            "CSS",
+            "Python",
+            "Go"
+        ],
+        "frameworks": [
+            "React",
+            "Typescript",
+            "NodeJs",
+            "Next.js",
+            "TailwindCSS"
+        ],
+        "others": [
+            "Figma",
+            "AdobeXD",
+            "AWS"
+        ]
+    }
+}
