@@ -1,96 +1,42 @@
-import { render, screen, waitFor, fireEvent } from "@testing-library/react";
+/*
+ * This file tests the blog search feature end-to-end by simulating real user interactions — typing and clearing the search input.
+ * It mocks the global fetch function to control API responses and verifies that the component updates the displayed posts accordingly.
+ */
+import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import Blog from "../pages/blog/index";
 import { mockBlogs } from "../__mocks__/mockBlog";
 
-// Mocking Next.js components and utilities
-// Purposes: 1. Avoid actual DOM manipulation and side effects during tests using JSDOM environment.
-//          2. Provide controlled behavior for components that are not the focus of the tests (e.g., Head, Router).
-//         3. Ensure tests run in isolation without dependencies on external libraries or APIs.
-
-jest.mock("../animations", () => ({
+/* Replaces the real `stagger` animation (powered by GSAP) with a no-op mock function,
+ * preventing GSAP from running in JSDOM where CSS layout is unavailable and would cause a crash,
+ * so the tests can focus on the search behavior.
+ */
+jest.mock("../animations/index.js", () => ({
   stagger: jest.fn(),
 }));
 
-jest.mock("next/head", () => {
-  const React = require("react");
-  const Head: React.FC<{ children: React.ReactNode }> = ({ children }) => <>{children}</>;
-  return Head;
-});
-
-jest.mock("next/router", () => ({
-  __esModule: true,
-  default: { push: jest.fn() },
-  useRouter: () => ({
-    push: jest.fn(),
-    reload: jest.fn(),
-  }),
-}));
-
-jest.mock("../utils", () => ({
-  ISOToDate: jest.fn(() => "Mock Date"),
-  useIsomorphicLayoutEffect: (fn: () => void) => fn(),
-}));
-
-jest.mock("../data/portfolio.json", () => ({
-  showBlog: true,
-  showCursor: false,
-}));
-
-jest.mock("../components/Button", () => {
-  const React = require("react");
-  interface ButtonProps {
-    children?: React.ReactNode;
-    onClick?: () => void;
-  }
-  const Button: React.FC<ButtonProps> = ({ children, onClick }) => (
-    <button onClick={onClick}>{children}</button>
-  );
-
-  return Button;
-});
-
-jest.mock("../components/Cursor", () => {
-  const React = require("react");
-  const Cursor: React.FC = () => <div>Cursor</div>;
-  return Cursor;
-});
-
-jest.mock("../components/Header", () => {
-  const React = require("react");
-  const Header: React.FC = () => <div>Header</div>;
-  return Header;
-});
-
-// Blog Search Tests Start Here
 describe("Blog search", () => {
-  // Using mockBlogs as initial posts for testing purposes.
   const initialPosts = mockBlogs;
-  // Mocking the global fetch function to control API responses during tests.
   let mockFetch: jest.MockedFunction<typeof fetch>;
-  // Setting up a new mock for fetch before each test to ensure isolation and prevent test interference.
   beforeEach(() => {
     mockFetch = jest.fn() as jest.MockedFunction<typeof fetch>;
     global.fetch = mockFetch;
   });
-  // Clearing all mocks after each test to reset the state and ensure that tests do not affect each other.
   afterEach(() => {
     jest.clearAllMocks();
   });
 
-  // First test case: Verifies that the initial posts are displayed correctly before any search is performed.
+  // FIRST TEST CASE: Verifies that the initial posts are displayed correctly before any search is performed.
   it("shows initial posts before searching", () => {
     render(<Blog posts={initialPosts} />); // ARRANGE
-
-    expect(screen.getByText("What is Software Development Lifecycle (SDLC) in Software Engineering")).toBeInTheDocument(); // ASSERT
-    expect(screen.getByText("Test Blog")).toBeInTheDocument(); // ASSERT
-
     initialPosts.forEach((post) => {
-      expect(screen.getByText(post.title)).toBeInTheDocument();
-    }); // ASSERT
-  }); // End of initial posts test
+      expect(screen.getByText(post.title)).toBeInTheDocument(); // ASSERT
+      expect(screen.getAllByText(post.preview).length).toBeGreaterThan(0); // ASSERT
+    });
+  }); // End of the first test case
 
-  // Second test case: Simulates user typing in the search box and verifies that the component fetches and displays the filtered blogs based on the search keyword.
+  // SECOND TEST CASE: Simulates user typing in the search box and verifies that the component fetches 
+  // and displays the filtered blogs based on the search keyword.
   it("fetches filtered blogs when user types in search box", async () => {
     const filteredPosts = [
       {
@@ -103,41 +49,44 @@ describe("Blog search", () => {
         date: "2026-03-17T14:01:41.564Z",
       },
     ];
-
-    mockFetch.mockResolvedValue({
-      json: jest.fn().mockResolvedValue(filteredPosts),
-    } as unknown as Response);
+    mockFetch.mockImplementation((url: string | URL | Request) =>
+      Promise.resolve({
+        json: () => Promise.resolve(url.toString().includes("keyword=sdlc") ? filteredPosts : []),
+      } as Response)
+    );
 
     render(<Blog posts={initialPosts} />); // ARRANGE
-
-    const user = userEvent.setup(); // Setting up userEvent to simulate user interactions more realistically.
-    await user.type(screen.getByRole("searchbox"), "sdlc"); // ACT: Simulating user typing "sdlc" in the search box.
-
+    const searchInput = screen.getByRole("searchbox"); // ACT
+    await userEvent.type(searchInput, "sdlc");
     await waitFor(() => {
-      expect(mockFetch).toHaveBeenCalledWith("/api/blog?keyword=sdlc");
-    }); // ASSERT: Verifying that the fetch function was called with the correct API endpoint and query parameter.
+      expect(mockFetch).toHaveBeenLastCalledWith("/api/blog?keyword=sdlc"); // ASSERT
+      expect(screen.getByText("What is Software Development Lifecycle (SDLC) in Software Engineering")).toBeInTheDocument(); // ASSERT
+      expect(screen.queryByText("Test Blog")).not.toBeInTheDocument(); // ASSERT
+    });
+  }); // End of the second test case
 
-    expect(await screen.findByText("What is Software Development Lifecycle (SDLC) in Software Engineering")).toBeInTheDocument(); // ASSERT
-    expect(screen.queryByText("Test Blog")).not.toBeInTheDocument(); // ASSERT
-  }); // End of filtered blogs test
-
-  // Third test case: Simulates a search that returns no results and verifies that the component displays an appropriate message indicating that no blogs matched the search criteria.
+  /* THIRD TEST CASE: Simulates a search that returns no results and verifies that the component displays an appropriate message indicating that no blogs matched the search criteria.
+   * TODO: THIRD TEST CASE — Write a test that simulates a search returning no results.
+   *
+   * Scenario: The user types a keyword that does not match any blog post.
+   *           The API returns an empty array, and the component should display
+   *           a "No blogs matched your search." message.
+   *
+   * Steps to implement:
+   * 1. Use mockFetch.mockImplementation() to return an empty array [] when the
+   *    URL contains the keyword (do not match any posts) you typed, and initialPosts otherwise.
+   * 2. Render the Blog component with initialPosts. (ARRANGE)
+   * 3. Get the search input by role and type the defined keyword that won't match any post. (ACT)
+   * 4. Use waitFor() to assert that:
+   *    - mockFetch was last called with the correct API URL and keyword. (ASSERT)
+   *    - The "No blogs matched your search." message is visible in the DOM. (ASSERT)
+   */
   it("shows no-results message when API returns empty array", async () => {
-    mockFetch.mockResolvedValue({
-      json: jest.fn().mockResolvedValue([]),
-    } as unknown as Response);
+    // Write your test here
+    throw new Error("Not implemented — complete this test case to proceed");
+  }); // End of the third test case
 
-    render(<Blog posts={initialPosts} />); // ARRANGE
-
-    const searchInput = screen.getByRole("searchbox"); // ACT: Getting the search input element to simulate user typing.
-    await userEvent.type(searchInput, "graphql"); // ACT: Simulating user typing "graphql" in the search box.
-
-    expect(
-      await screen.findByText("No blogs matched your search.")
-    ).toBeInTheDocument(); // ASSERT: Verifying that the no-results message is displayed when the API returns an empty array.
-  }); // End of no-results message test
-
-  // Fourth test case: Simulates clearing the search input after performing a search and verifies that the original list of posts is restored and displayed correctly.
+  // FOURTH TEST CASE: Simulates clearing the search input after performing a search and verifies that the original list of posts is restored and displayed correctly.
   it("restores original posts when search input is cleared", async () => {
     const filteredPosts = [
       {
@@ -150,25 +99,24 @@ describe("Blog search", () => {
         date: "2026-03-17T14:01:41.564Z",
       },
     ];
-
-    mockFetch.mockResolvedValue({
-      json: jest.fn().mockResolvedValue(filteredPosts),
-    } as unknown as Response);
+    mockFetch.mockImplementation((url: string | URL | Request) =>
+      Promise.resolve({
+        json: () => Promise.resolve(url.toString().includes("keyword=sdlc") ? filteredPosts : []),
+      } as Response)
+    );
 
     render(<Blog posts={initialPosts} />); // ARRANGE
     const searchInput = screen.getByRole("searchbox"); // ACT
-
-    await userEvent.type(searchInput, "react");
-    expect(await screen.findByText("What is Software Development Lifecycle (SDLC) in Software Engineering")).toBeInTheDocument(); // ASSERT
-    expect(screen.queryByText("From Software Engineer to ML Engineer")).not.toBeInTheDocument(); // ASSERT
-
-    await userEvent.clear(searchInput);
-
-    expect(screen.getByText("What is Software Development Lifecycle (SDLC) in Software Engineering")).toBeInTheDocument(); // ASSERT
-    expect(screen.getByText("From Software Engineer to ML Engineer")).toBeInTheDocument(); // ASSERT
-    initialPosts.forEach((post) => {
-      expect(screen.getByText(post.title)).toBeInTheDocument();
+    await userEvent.type(searchInput, "sdlc");
+    await waitFor(() => {
+      expect(mockFetch).toHaveBeenLastCalledWith("/api/blog?keyword=sdlc"); // ASSERT
+      expect(screen.getByText("What is Software Development Lifecycle (SDLC) in Software Engineering")).toBeInTheDocument(); // ASSERT
+      expect(screen.queryByText("Test Blog")).not.toBeInTheDocument(); // ASSERT
     });
-  }); // End of restore original posts test
+    await userEvent.clear(searchInput); //Clear the search input
+    initialPosts.forEach((post) => {
+      expect(screen.getByText(post.title)).toBeInTheDocument(); // ASSERT
+    });
+  }); // End of the fourth test case
 
 }); // End of describe block
