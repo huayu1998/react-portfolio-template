@@ -1,122 +1,225 @@
 <img width="1489" height="846" alt="new_img" src="https://github.com/user-attachments/assets/39d7a7ce-bec8-41c9-99a7-d09ea3e644f0" />
 
+# Multimodal GenAI Software Development User Study Tasks
 
-### Live - https://react-portfolio-template.netlify.app
+This project is adapted from an open source portfolio template for use as a study exercise. Participants will run the application, implement a feature, write a test case, and locate and fix a bug. The original project has been extended with a testing infrastructure using the [Jest](https://jestjs.io/) framework alongside [React Testing Library](https://testing-library.com/) and [jest-environment-jsdom](https://github.com/jsdom/jsdom) — including test files (`__tests__/`), mock data (`__mocks__/`), and Jest configuration — to support the testing tasks in this study.
 
-### Demo Video - https://www.youtube.com/watch?v=62_HLbx2zLQ&t=9s
+# What Is This Application?
 
-### Open Source UI Components - https://ui.chetanverma.com/
+This is a personal portfolio web application that allows users to showcase their work projects, services, blog posts, and resume, etc. It includes a markdown-based blog system where posts can be created, read, update, and deleted (Blog CRUD) through a development UI. Other features include the following:
 
-### Tutorials
-
-Youtube - https://www.youtube.com/watch?v=8cmJ2kR4SpM
-
-Blog - https://www.chetanverma.com/blog/how-to-build-a-portfolio-website-using-nextjs-and-tailwindcss
-
-### Features -
-
-- Modern Stack (Next.js + TailwindCSS)
+- Modern Full App Stack (Next.js + TailwindCSS)
 - Minimal Design
 - Easy To Browse
 - Easy To Customize your details With GUI
-- Blog Crud (Create, Read, Update, Delete blog with easy to use UI).
-- Dark Mode
+- Light/Dark Mode
 
-### Sections
+# Please complete the following steps before the tasks
 
-- Header
-- Work
-- Services
-- About
-- Contact
-- Markdown Blog
+---
 
-### How To Use
+## Step 1 - Prerequisites — Node Version Manager (nvm)
 
-- Clone this repo
-- run `yarn`
-- `yarn dev`
+> **Step 1.1** - Check nvm installed or not
 
-#### If `yarn` is not installed:
+This project requires a specific Node.js version managed via [nvm](https://github.com/nvm-sh/nvm). First check whether nvm is already installed by entering the following command line in the terminal:
 
-* Install via npm: `npm install -g yarn`
-* Install via Homebrew: `brew install yarn`
-* ...
+```bash
+nvm -v
+```
 
-### NVM (node version manager) required & Check node version
+If a version number is printed (e.g. `0.39.7`), nvm is installed — skip to the step 1.2 below. If you get `command not found`, install it using the command for your OS:
 
-* Node 20.19.0 (yarn)
-* `echo "22.22.1" > .nvmrc & nvm install`
-* `nvm install`
-* `nvm use 22`
-* `rm -rf node_modules .next package-lock.json `
-* `node -v`
-* `npm -v`
-* `yarn install `
-* `yarn dev`
+**macOS / Linux**
 
-### How To Run (using npm or yarn)
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
+```
 
-* Clone the repo
-* Run `npm install --legacy-peer-deps` to install the dependencies and packages
-* Run `npm run dev` to start the app
-* OR
-* Run `yarn install` to install the dependencies and packages
-* Run `yarn dev` to start the app
+Then restart your terminal and verify with `nvm -v`.
 
-### Testing dependencies set up
+**Windows**
 
-* Run `npm i -D @testing-library/jest-dom @testing-library/react @testing-library/user-event jest jest-environment-jsdom ts-jest --legacy-peer-dep`
-* Run `npm i -D eslint-plugin-jest-dom eslint-plugin-testing-library --legacy-peer-dep`
-* Run `npm i -D @testing-library/jest-dom@5.16.5 --legacy-peer-deps`
-* Run `npm i -D @testing-library/react@14.0.0 --legacy-peer-deps`
-* Run `npm install --save-dev typescript --legacy-peer-deps`
-* Run `npm install --save-dev ts-jest --legacy-peer-deps`
-* Run `npm i -D supertest --legacy-peer-deps`
-* Run `npm i -D @types/supertest --legacy-peer-deps`
-* Run `npm install node-mocks-http --save-dev --legacy-peer-deps`
-* Run `npm install msw --save-dev --legacy-peer-deps`
+Download and run the latest installer from [nvm-windows releases](https://github.com/coreybutler/nvm-windows/releases) (`nvm-setup.exe`), then restart your terminal and verify with `nvm -v`.
 
-### Get the LOC
+> **Step 1.2** - Install and use required Node.js version
 
-* Run `git ls-files | xargs wc -l`
-* Run `cloc .`
+Once nvm is installed, use the `.nvmrc` file in this repo to install and activate the required Node.js version automatically:
 
-### Short-cut Rules
+```bash
+# Install the required Node version (20.19.0) and switch to it
+nvm install
+nvm use 20
+```
 
-* Mac built-in formatting shortcut: `Shift + Option + F`
+Verify the active versions match what the project expects:
 
-### How To Deploy -
+```bash
+node -v   # should print v20.19.0
+npm -v    # should print v10.8.2
+```
 
-- There are many ways to Deploy this repo.
-- here we are gonna use netlify
-- Login into netlify with github
-- after login select the forked repo or the repo you want to deploy
-- after selecting netlify will automatially deploy your website.
+## Step 2 - Installation
 
-Quickes way to deploy this repo -
+> **Node version:** 20.19.0 — managed via nvm (see Prerequisites above).
 
-[![Deploy To Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/chetanverma16/react-portfolio-template)
+```bash
+# Clone the repository
+git clone <repo-url>
+cd react-portfolio-template
 
-### How To Contribute -
+# Use the following command to install packages and dependencies
+npm install --legacy-peer-deps
+```
 
-I would be very happy to review your PRs and all the awesome things that you can improve on this portfolio.
+## Step 3 - Running the Application
 
-### Tech Stack Used -
+```bash
+# Start the development server
+npm run dev
+```
 
-- Next.js
-- TailwindCSS
+Then open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### Thanks
+# Prepare to Get Started with Study Tasks
 
-If you liked this portfolio template, don't forget to give it a ⭐.
+Before starting these tasks, please note the following:
+• You will complete the programming tasks with the use of Google AI Studio along with the features: text input-output, file upload, audio and stream live.
+• You are free to use any browser to search webs for help or solutions.
+• Read all task instructions aloud completely before starting the task.
+• Keep your focus on meeting the requirements of the current task. Do not work ahead.
+**Do you have any questions before you begin?**
 
-## Awesome Contributors
+---
 
-[@Aryan3212](https://github.com/Aryan3212) [@achu-krishna](https://github.com/achu-krishna)
+# Task 1 — Implement the Blog Search Feature
 
-## Supporting
+***Please take up to 1.5 minutes to read these task instructions aloud.***
 
-Many hours of hard work have gone into this project. Your support will be very appreciated!
+The blog page currently shows all posts with no way to filter them. Your task is to implement a keyword-based search feature using keywords from either the title or the preview content. T
 
-[![](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/chetanverma)
+#### Files to modify:
+
+- `pages/api/blog/index.js` — add a `GET` handler that accepts a `keyword` query parameter and returns filtered blog posts
+- `pages/blog/index.js` — add a search input and wire it up to the API
+
+Look for the `TODO:` comments in both files — they describe each step you need to implement.
+
+#### Test your results
+
+Once implemented, run the test command to verify your solution:
+
+```bash
+npm test blog.test.tsx blog.search.test.tsx
+```
+
+All tests except the third test case in `blog.search.test.tsx` should pass.
+
+***Let us know when you are ready to begin the task.***
+
+#### Commit and Push Your Solution
+
+Follow the commands to push your code for Task 1 to the repository:
+
+```
+git add .
+git commit -m "Task 1 - [Your Name]"
+git push
+```
+
+---
+
+# Task 2 — Write a Test Case
+
+**Please take up to 1.5 minutes to read these task instructions aloud.**
+
+#### File to modify:
+
+- `pages/blog/index.js` — write and implement the third test case
+
+This file contains four test cases for the blog search feature. The first three are already implemented as references:
+
+- **Test 1** — Renders the Blog component and verifies that all initial posts are visible in the DOM before any search is performed.
+- **Test 2** — Simulates a user typing a keyword into the search box, mocks the API to return a filtered list, and verifies that only the matching post is displayed.
+- **Test 4** — Simulates typing a keyword followed by clearing the input, and verifies that the full list of posts is restored after clearing.
+
+Your task is to implement **Test 3**:
+
+```
+"shows no-results message when API returns empty array"
+```
+
+This test case is left empty with `TODO:` instruction comments. Follow the comments to implement it, using the existing test cases as reference.
+
+#### Test your results
+
+```bash
+npm test blog.search.test.tsx
+```
+
+All four test cases should pass.
+
+**Let us know when you are ready to begin the task.**
+
+#### Commit and Push Your Solution
+
+Follow the commands to push your code for Task 2 to the repository:
+
+```
+git add .
+git commit -m "Task 2 - [Your Name]"
+git push
+```
+
+---
+
+# Task 3 — Locate and Fix a Bug
+
+**Please take up to 1.5 minutes to read these task instructions aloud.**
+
+The blog page has a **delete** feature that is currently broken. When you try to delete a blog post, the operation silently fails and the post remains in the list.
+
+#### Steps:
+
+1. Start the development server (`npm run dev`) if you stop the server and navigate to [http://localhost:3000/blog](http://localhost:3000/blog).
+2. Try to delete any blog post using the delete button.
+3. Observe that the post is **not removed** — the delete does not work as expected.
+4. Open your terminal and look at the **server error log** printed by Next.js. The error message will point you to the problem.
+5. Using the error log as a guide, open `pages/api/blog/index.js` and locate and fix the bug so that the delete operation works correctly.
+
+#### Test your results
+
+After applying the fix:
+
+* Go back to the blog page and confirm that deleting a post now removes it from the list.
+* Try to click the "Add New Post +" button at the lower right coner to add a new blog, and then delete it.
+
+If the function work, then you're all done, congrats!
+
+**Let us know when you are ready to begin the task.**
+
+#### Commit and Push Your Solution
+
+Follow the commands to push your code for Task 3 to the repository:
+
+```
+git add .
+git commit -m "Task 3 - [Your Name]"
+git push
+```
+
+---
+
+#### Main Tech Stack Used
+
+- | Framework | [Next.js](https://nextjs.org/) |
+- | Styling | [TailwindCSS](https://tailwindcss.com/) |
+- | Testing | [Jest](https://jestjs.io/), [React Testing Library](https://testing-library.com/), [jest-environment-jsdom](https://github.com/jsdom/jsdom) |
+
+## Credits
+
+This project is adapted from the open source [React Portfolio Template](https://github.com/chetanverma16/react-portfolio-template) originally created by [Chetan Verma](https://www.chetanverma.com/).
+
+- GitHub: [@chetanverma16](https://github.com/chetanverma16)
+- Live demo: [react-portfolio-template.netlify.app](https://react-portfolio-template.netlify.app)
+- Original tutorial: [How to build a portfolio website using Next.js and TailwindCSS](https://www.chetanverma.com/blog/how-to-build-a-portfolio-website-using-nextjs-and-tailwindcss)
