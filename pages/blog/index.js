@@ -13,6 +13,10 @@ const Blog = ({ posts }) => {
   const text = useRef();
   const router = useRouter();
   const [mounted, setMounted] = useState(false);
+  /* TODO: Step 1 — Add two state variables using useState: 
+   * - One to track the search input value, and named it `searchTerm`.
+   * - One to hold the filtered posts to display, and named it `filteredPosts` (initialize it to all posts). 
+   */
 
   useIsomorphicLayoutEffect(() => {
     stagger(
@@ -27,6 +31,12 @@ const Blog = ({ posts }) => {
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  /* TODO: Step 2 — Add a useEffect that watches searchTerm and posts. 
+   * - When searchTerm is non-empty, fetch /api/blog?keyword=<searchTerm> and 
+   *   update filteredPosts with the response.
+   * - When searchTerm is cleared, reset filteredPosts to the full posts list. 
+   */
 
   const createBlog = () => {
     if (process.env.NODE_ENV === "development") {
@@ -80,7 +90,16 @@ const Blog = ({ posts }) => {
             >
               Blog.
             </h1>
+            {/* TODO: Step 3 — Add a search input below.
+              * - Bind its value to `searchTerm` and update it on change and assign the role to "searchbox" for testing purposes.
+              * - Also show a "No blogs matched your search." message.
+              * - When `searchTerm` is set but `filteredPosts` is empty.
+              * 
+              */}
+            
             <div className="mt-10 grid grid-cols-1 mob:grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 justify-between gap-10">
+              {/* TODO: Step 4 — Replace the original `posts` mapping with `filteredPosts` in the map function below,
+                  so the grid reflects the current search results. */}
               {posts &&
                 posts.map((post) => (
                   <div

@@ -8,6 +8,28 @@ import { syncMockBlog } from "../../../utils/syncMockBlog";
 export default function handler(req, res) {
   const postsFolder = join(process.cwd(), "_posts");
   if (process.env.NODE_ENV === "development") {
+    /*
+     * TODO: Implement Blog Search — API Handler (pages/api/blog/index.js)
+     *
+     * Add a GET handler that supports keyword-based blog search.
+     *
+     * Steps to implement:
+     * 1. Check that req.method === "GET".
+     * 2. Read the optional `keyword` query parameter from req.query.
+     * 3. Use fs.readdirSync() to list all files in `postsFolder`.
+     * 4. For each file, read its contents and parse the front matter using
+     *    gray-matter's matter() function. Build a blog object from the parsed
+     *    data, and include the slug (filename without the .md extension).
+     * 5. If a keyword was provided, filter the blogs array to only include
+     *    entries whose title or preview contains the keyword (case-insensitive).
+     * 6. Respond with res.status(200).json(...) — either the filtered list
+     *    or the full list if no keyword was given.
+     * 
+     * To start, uncomment the code of the GET handler below and implement the keyword filtering logic.
+     */
+    // if (req.method === "GET") {
+    //   // Start your implementation here
+    // }
     if (req.method === "POST") {
       const data = matter.stringify("# New Blog", {
         date: new Date().toISOString(),
