@@ -1,7 +1,9 @@
 ![thumbnail](https://user-images.githubusercontent.com/16558205/180779213-ea740975-3df1-460a-a964-0a623ee25872.png)
 
 ### Live - https://react-portfolio-template.netlify.app
+
 ### Demo Video - https://www.youtube.com/watch?v=62_HLbx2zLQ&t=9s
+
 ### Open Source UI Components - https://ui.chetanverma.com/
 
 ### Tutorials
@@ -10,7 +12,7 @@ Youtube - https://www.youtube.com/watch?v=8cmJ2kR4SpM
 
 Blog - https://www.chetanverma.com/blog/how-to-build-a-portfolio-website-using-nextjs-and-tailwindcss
 
-### Features - 
+### Features -
 
 - Modern Stack (Next.js + TailwindCSS)
 - Minimal Design
@@ -18,7 +20,6 @@ Blog - https://www.chetanverma.com/blog/how-to-build-a-portfolio-website-using-n
 - Easy To Customize your details With GUI
 - Blog Crud (Create, Read, Update, Delete blog with easy to use UI).
 - Dark Mode
-
 
 ### Sections
 
@@ -29,15 +30,62 @@ Blog - https://www.chetanverma.com/blog/how-to-build-a-portfolio-website-using-n
 - Contact
 - Markdown Blog
 
-
 ### How To Use
 
 - Clone this repo
 - run `yarn`
 - `yarn dev`
 
+#### If `yarn` is not installed:
 
-### How To Deploy - 
+* Install via npm: `npm install -g yarn`
+* Install via Homebrew: `brew install yarn`
+* ...
+
+### NVM (node version manager) required & Check node version
+
+* Node 20.19.0 (yarn)
+* `echo "22.22.1" > .nvmrc & nvm install`
+* `nvm install`
+* `nvm use 22`
+* `rm -rf node_modules .next package-lock.json `
+* `node -v`
+* `npm -v`
+* `yarn install `
+* `yarn dev`
+
+### How To Run (using npm or yarn)
+
+* Clone the repo
+* Run `npm install --legacy-peer-deps` to install the dependencies and packages
+* Run `npm run dev` to start the app
+* OR
+* Run `yarn install` to install the dependencies and packages
+* Run `yarn dev` to start the app
+
+### Testing dependencies set up
+
+* Run `npm i -D @testing-library/jest-dom @testing-library/react @testing-library/user-event jest jest-environment-jsdom ts-jest --legacy-peer-dep`
+* Run `npm i -D eslint-plugin-jest-dom eslint-plugin-testing-library --legacy-peer-dep`
+* Run `npm i -D @testing-library/jest-dom@5.16.5 --legacy-peer-deps`
+* Run `npm i -D @testing-library/react@14.0.0 --legacy-peer-deps`
+* Run `npm install --save-dev typescript --legacy-peer-deps`
+* Run `npm install --save-dev ts-jest --legacy-peer-deps`
+* Run `npm i -D supertest --legacy-peer-deps`
+* Run `npm i -D @types/supertest --legacy-peer-deps`
+* Run `npm install node-mocks-http --save-dev --legacy-peer-deps`
+* Run `npm install msw --save-dev --legacy-peer-deps`
+
+### Get the LOC
+
+* Run `git ls-files | xargs wc -l`
+* Run `cloc .`
+
+### Short-cut Rules
+
+* Mac built-in formatting shortcut: `Shift + Option + F`
+
+### How To Deploy -
 
 - There are many ways to Deploy this repo.
 - here we are gonna use netlify
@@ -45,35 +93,29 @@ Blog - https://www.chetanverma.com/blog/how-to-build-a-portfolio-website-using-n
 - after login select the forked repo or the repo you want to deploy
 - after selecting netlify will automatially deploy your website.
 
-Quickes way to deploy this repo - 
+Quickes way to deploy this repo -
 
 [![Deploy To Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/chetanverma16/react-portfolio-template)
 
-
-### How To Contribute - 
+### How To Contribute -
 
 I would be very happy to review your PRs and all the awesome things that you can improve on this portfolio.
 
+### Tech Stack Used -
 
-### Tech Stack Used - 
 - Next.js
 - TailwindCSS
-
 
 ### Thanks
 
 If you liked this portfolio template, don't forget to give it a ⭐.
 
 ## Awesome Contributors
+
 [@Aryan3212](https://github.com/Aryan3212) [@achu-krishna](https://github.com/achu-krishna)
 
 ## Supporting
+
 Many hours of hard work have gone into this project. Your support will be very appreciated!
 
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/chetanverma)
-
-
-
-
-
-
+[![](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/chetanverma)
