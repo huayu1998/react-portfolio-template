@@ -1,3 +1,7 @@
+/*
+ * This file tests the basic rendering of the Home page — verifying that key UI elements
+ * such as the "Contact" and "Resume" text and at least one image are present in the DOM.
+ */
 import { render, screen } from '@testing-library/react'
 import HomePage from '../pages/index'
 

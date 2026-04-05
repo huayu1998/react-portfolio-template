@@ -1,3 +1,7 @@
+/*
+ * This file tests the blog search feature in isolation — without mocking fetch or simulating async user interactions.
+ * It verifies the static UI (search input rendering) and the core filter logic directly against the mockBlogs array.
+ */
 import { render, screen, fireEvent, waitFor} from '@testing-library/react'
 import BlogPage from "../pages/blog/index"
 import { mockBlogs } from "../__mocks__/mockBlog";
