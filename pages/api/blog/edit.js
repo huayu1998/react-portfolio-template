@@ -1,6 +1,7 @@
 import fs from "fs";
 import { join } from "path";
 import matter from "gray-matter";
+import { syncMockBlog } from "../../../utils/syncMockBlog";
 
 export default function handler(req, res) {
   const postsfolder = join(process.cwd(), `/_posts/`);
@@ -17,7 +18,10 @@ export default function handler(req, res) {
           image,
         }),
         "utf-8",
-        (err) => console.log(err)
+        (err) => {
+          if (err) console.log(err);
+          else syncMockBlog(); // Re-reads all posts from _posts/ and rewrites __mocks__/mockBlog.js when a blog post is edited.
+        }
       );
       res.status(200).json({ status: "DONE" });
     } else {
