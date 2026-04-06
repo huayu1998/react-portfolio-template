@@ -100,7 +100,7 @@ Before starting these tasks, please note the following:
 
 The blog page currently displays all posts without any filtering capability. Your task is to implement a keyword-based search feature that allows users to filter blog posts based on keywords found in either the title or the preview content.
 
-The search feature must meet the following requirements:
+The search feature must meet the following requirements, testing:
 
 * When a user enters one or more keywords that exist in the title or preview content of any blog post, the system should return all blog posts containing those keywords.
 * When a user enters keywords that do not match any blog post title or preview content, the system should display the message: "No blogs matched your search."
