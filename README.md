@@ -84,10 +84,12 @@ Then open [http://localhost:3000](http://localhost:3000) in your browser.
 # Prepare to Get Started with Study Tasks
 
 Before starting these tasks, please note the following:
-• You will complete the programming tasks with the use of Google AI Studio along with the features: text input-output, file upload, audio and stream live.
-• You are free to use any browser to search webs for help or solutions.
-• Read all task instructions aloud completely before starting the task.
-• Keep your focus on meeting the requirements of the current task. Do not work ahead.
+
+* You will complete the programming tasks **with the** ***use of Google AI Studio along with the features: text input-output, file upload, audio and stream live***.
+* You are free to **use any browser to search webs for help or solutions**.
+* Read all task instructions aloud completely before starting the task.
+* Keep your focus on meeting the requirements of the current task. Do not work ahead.
+
 **Do you have any questions before you begin?**
 
 ---
