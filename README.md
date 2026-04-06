@@ -1,4 +1,4 @@
-<img width="1489" height="846" alt="new_img" src="https://github.com/user-attachments/assets/39d7a7ce-bec8-41c9-99a7-d09ea3e644f0" />
+<img width="700" alt="new_img" src="https://github.com/user-attachments/assets/39d7a7ce-bec8-41c9-99a7-d09ea3e644f0" />
 
 # Multimodal GenAI Software Development User Study Tasks
 
