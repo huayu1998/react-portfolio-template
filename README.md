@@ -103,7 +103,11 @@ The blog page currently displays all posts without any filtering capability. You
 The search feature must meet the following requirements:
 
 * When a user enters one or more keywords that exist in the title or preview content of any blog post, the system should return all blog posts containing those keywords.
+<img width="559" height="726" alt="title" src="https://github.com/user-attachments/assets/80f5f353-8f90-4fdd-b7d7-3fbba1267050" />
+<img width="1015" height="751" alt="title-preview" src="https://github.com/user-attachments/assets/889d9d51-c7c5-42da-a61c-fa9e5ae15938" />
+
 * When a user enters keywords that do not match any blog post title or preview content, the system should display the message: "No blogs matched your search."
+<img width="1167" height="247" alt="no-results" src="https://github.com/user-attachments/assets/373bf9d0-f167-4a0f-95cf-224692c63af6" />
 
 #### Files to modify:
 
