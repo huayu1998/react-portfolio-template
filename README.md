@@ -4,6 +4,9 @@
 
 This project is adapted from an open source portfolio template for use as a study exercise. Participants will run the application, implement a feature, write a test case, and locate and fix a bug. The original project has been extended with a testing infrastructure using the [Jest](https://jestjs.io/) framework alongside [React Testing Library](https://testing-library.com/) and [jest-environment-jsdom](https://github.com/jsdom/jsdom) — including test files (`__tests__/`), mock data (`__mocks__/`), and Jest configuration — to support the testing tasks in this study.
 
+<img width="1167" height="247" alt="no-results" src="https://github.com/user-attachments/assets/b2d7ea88-1e92-4aef-b2e4-0226d71d85f6" />
+
+
 # What Is This Application?
 
 This is a personal portfolio web application that allows users to showcase their work projects, services, blog posts, and resume, etc. It includes a markdown-based blog system where posts can be created, read, update, and deleted (Blog CRUD) through a development UI. Other features include the following:
