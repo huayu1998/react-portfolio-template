@@ -100,6 +100,9 @@ Before starting these tasks, please note the following:
 
 The blog page currently displays all posts without any filtering capability. Your task is to implement a keyword-based search feature that allows users to filter blog posts based on keywords found in either the title or the preview content.
 
+<img width="400" alt="original" src="https://github.com/user-attachments/assets/ae95d9db-fdc2-47c1-8651-8dad3e05296a" />
+
+
 The search feature must meet the following requirements:
 
 * When a user enters one or more keywords that exist in the title or preview content of any blog post, the system should return all blog posts containing those keywords.
