@@ -102,7 +102,6 @@ The blog page currently displays all posts without any filtering capability. You
 
 <img width="400" alt="original" src="https://github.com/user-attachments/assets/ae95d9db-fdc2-47c1-8651-8dad3e05296a" />
 
-
 The search feature must meet the following requirements:
 
 * When a user enters one or more keywords that exist in the title or preview content of any blog post, the system should return all blog posts containing those keywords.
@@ -111,11 +110,9 @@ The search feature must meet the following requirements:
 
 <img width="450" alt="title-preview" src="https://github.com/user-attachments/assets/c1f86810-11d4-449a-8419-e9f10854039e" />
 
-
 * When a user enters keywords that do not match any blog post title or preview content, the system should display the message: "No blogs matched your search."
 
 <img width="600" alt="no-results" src="https://github.com/user-attachments/assets/c938d0d4-e8ff-4855-9c06-829fcc9b1e40" />
-
 
 #### Files to modify:
 
@@ -226,14 +223,6 @@ git add .
 git commit -m "Task 3 - [Your Name]"
 git push
 ```
-
----
-
-#### Main Tech Stack Used
-
-- | Framework | [Next.js](https://nextjs.org/) |
-- | Styling | [TailwindCSS](https://tailwindcss.com/) |
-- | Testing | [Jest](https://jestjs.io/), [React Testing Library](https://testing-library.com/), [jest-environment-jsdom](https://github.com/jsdom/jsdom) |
 
 ## Credits
 
