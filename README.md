@@ -104,14 +104,14 @@ The search feature must meet the following requirements:
 
 * When a user enters one or more keywords that exist in the title or preview content of any blog post, the system should return all blog posts containing those keywords.
 
-<img width="559" height="726" alt="title" src="https://github.com/user-attachments/assets/2acc7cef-96d7-4fa5-9a12-3ac0362ab27e" />
+<img width="250" alt="title" src="https://github.com/user-attachments/assets/2acc7cef-96d7-4fa5-9a12-3ac0362ab27e" />
 
-<img width="1015" height="751" alt="title-preview" src="https://github.com/user-attachments/assets/c1f86810-11d4-449a-8419-e9f10854039e" />
+<img width="450" alt="title-preview" src="https://github.com/user-attachments/assets/c1f86810-11d4-449a-8419-e9f10854039e" />
 
 
 * When a user enters keywords that do not match any blog post title or preview content, the system should display the message: "No blogs matched your search."
 
-<img width="1167" height="247" alt="no-results" src="https://github.com/user-attachments/assets/c938d0d4-e8ff-4855-9c06-829fcc9b1e40" />
+<img width="600" alt="no-results" src="https://github.com/user-attachments/assets/c938d0d4-e8ff-4855-9c06-829fcc9b1e40" />
 
 
 #### Files to modify:
