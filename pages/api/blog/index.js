@@ -45,8 +45,8 @@ export default function handler(req, res) {
       res.status(200).json({ status: "CREATED" });
     }
     if (req.method === "DELETE") {
-      const deleteFile = join(postsFolder, `${req.body.slug}.md`);
-      fs.unlinkSync(deleteFile);
+      const deleteFile = join("./posts", `${req.body.slug}.md`);
+      fs.unlinkSync(deletefile);
       syncMockBlog(); // Re-reads all posts from _posts/ and rewrites __mocks__/mockBlog.js when a blog post is deleted.
       res.status(200).json({ status: "DONE" });
     }

@@ -91,12 +91,10 @@ const Blog = ({ posts }) => {
               Blog.
             </h1>
             {/* TODO: Step 3 — Add a search input below.
-              * - Bind its value to `searchTerm` and update it on change and assign the role to "searchbox" for testing purposes.
-              * - Also show a "No blogs matched your search." message.
-              * - When `searchTerm` is set but `filteredPosts` is empty.
-              * 
+              * - Bind its value to `searchTerm` and update it on change 
+              * - Assign the role to "searchbox", title to "Search" for testing purposes. (case-sensitive)
+              * - Show a "No blogs matched your search." message below the search box when `searchTerm` is set but `filteredPosts` is empty.
               */}
-            
             <div className="mt-10 grid grid-cols-1 mob:grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 justify-between gap-10">
               {/* TODO: Step 4 — Replace the original `posts` mapping with `filteredPosts` in the map function below,
                   so the grid reflects the current search results. */}
