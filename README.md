@@ -4,9 +4,6 @@
 
 This project is adapted from an open source portfolio template for use as a study exercise. Participants will run the application, implement a feature, write a test case, and locate and fix a bug. The original project has been extended with a testing infrastructure using the [Jest](https://jestjs.io/) framework alongside [React Testing Library](https://testing-library.com/) and [jest-environment-jsdom](https://github.com/jsdom/jsdom) — including test files (`__tests__/`), mock data (`__mocks__/`), and Jest configuration — to support the testing tasks in this study.
 
-<img width="1167" height="247" alt="no-results" src="https://github.com/user-attachments/assets/b2d7ea88-1e92-4aef-b2e4-0226d71d85f6" />
-
-
 # What Is This Application?
 
 This is a personal portfolio web application that allows users to showcase their work projects, services, blog posts, and resume, etc. It includes a markdown-based blog system where posts can be created, read, update, and deleted (Blog CRUD) through a development UI. Other features include the following:
@@ -106,11 +103,9 @@ The blog page currently displays all posts without any filtering capability. You
 The search feature must meet the following requirements:
 
 * When a user enters one or more keywords that exist in the title or preview content of any blog post, the system should return all blog posts containing those keywords.
-<img width="250" alt="title" src="https://github.com/user-attachments/assets/80f5f353-8f90-4fdd-b7d7-3fbba1267050" />
-<img width="450" alt="title-preview" src="https://github.com/user-attachments/assets/889d9d51-c7c5-42da-a61c-fa9e5ae15938" />
+<img width="559" height="726" alt="title" src="https://github.com/user-attachments/assets/d0eed622-6802-4571-a1ce-391eb4cf4ef9" />
 
 * When a user enters keywords that do not match any blog post title or preview content, the system should display the message: "No blogs matched your search."
-<img width="600" alt="no-results" src="https://github.com/user-attachments/assets/373bf9d0-f167-4a0f-95cf-224692c63af6" />
 
 #### Files to modify:
 
