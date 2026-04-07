@@ -151,7 +151,7 @@ git push
 
 #### File to modify:
 
-- `pages/blog/index.js` — write and implement the third test case
+- `__tests__/blog.search.test.tsx` — write and implement the third test case
 
 This file contains four test cases for the blog search feature. The first three are already implemented as references:
 
