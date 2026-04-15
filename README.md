@@ -14,6 +14,8 @@ This is a personal portfolio web application that allows users to showcase their
 - Easy To Customize your details With GUI
 - Light/Dark Mode
 
+**A note on TailwindCSS:** TailwindCSS is a utility-first CSS framework used to style this application. Rather than writing styles in a separate CSS file, Tailwind lets you apply small, single-purpose class names directly in your HTML or JSX. For example, instead of writing `background-color: blue; padding: 8px 16px;` in a stylesheet, you would write `className="bg-blue-500 px-4 py-2"` directly on the element. If you see a `className` attribute filled with short hyphenated words in the code, that is Tailwind handling what plain CSS would normally do.
+
 # Please complete the following steps before the tasks
 
 ---
