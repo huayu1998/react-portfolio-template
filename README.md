@@ -2,17 +2,11 @@
 
 # Multimodal GenAI Software Development User Study Tasks
 
-This project is adapted from an open source portfolio template for use as a study exercise. Participants will run the application, implement a feature, write a test case, and locate and fix a bug. The original project has been extended with a testing infrastructure using the [Jest](https://jestjs.io/) framework alongside [React Testing Library](https://testing-library.com/) and [jest-environment-jsdom](https://github.com/jsdom/jsdom) — including test files (`__tests__/`), mock data (`__mocks__/`), and Jest configuration — to support the testing tasks in this study.
+This project is adapted from an open source portfolio template for use as a study exercise.
 
-# What Is This Application?
+## What Is This Application?
 
-This is a personal portfolio web application that allows users to showcase their work projects, services, blog posts, and resume, etc. It includes a markdown-based blog system where posts can be created, read, update, and deleted (Blog CRUD) through a development UI. Other features include the following:
-
-- Modern Full App Stack (Next.js + TailwindCSS)
-- Minimal Design
-- Easy To Browse
-- Easy To Customize your details With GUI
-- Light/Dark Mode
+This is a personal portfolio, a full-stack web application using **Next.js** and **TailwindCSS**, that allows users to showcase their work projects, services, blog posts, and resume, etc. It includes a markdown-based blog system where posts can be created, read, update, and deleted (Blog CRUD) through a development UI. Other features include the following:
 
 **A note on TailwindCSS:** TailwindCSS is a utility-first CSS framework used to style this application. Rather than writing styles in a separate CSS file, Tailwind lets you apply small, single-purpose class names directly in your HTML or JSX. For example, instead of writing `background-color: blue; padding: 8px 16px;` in a stylesheet, you would write `className="bg-blue-500 px-4 py-2"` directly on the element. If you see a `className` attribute filled with short hyphenated words in the code, that is Tailwind handling what plain CSS would normally do.
 
@@ -22,9 +16,9 @@ This is a personal portfolio web application that allows users to showcase their
 
 ## Step 1 - Prerequisites — Node Version Manager (nvm)
 
-> **Step 1.1** - Check nvm installed or not
+This project requires a specific Node.js version managed via [nvm](https://github.com/nvm-sh/nvm).
 
-This project requires a specific Node.js version managed via [nvm](https://github.com/nvm-sh/nvm). First check whether nvm is already installed by entering the following command line in the terminal:
+> **Step 1.1** - Check nvm installed or not using the following command line
 
 ```bash
 nvm -v
@@ -38,20 +32,17 @@ If a version number is printed (e.g. `0.39.7`), nvm is installed — skip to the
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
 ```
 
-Then restart your terminal and verify with `nvm -v`.
-
 **Windows**
 
 Download and run the latest installer from [nvm-windows releases](https://github.com/coreybutler/nvm-windows/releases) (`nvm-setup.exe`), then restart your terminal and verify with `nvm -v`.
 
+Then restart your terminal and verify with `nvm -v`.
+
 > **Step 1.2** - Install and use required Node.js version
 
-Once nvm is installed, use the `.nvmrc` file in this repo to install and activate the required Node.js version automatically:
-
 ```bash
-# Install the required Node version (20.19.0) and switch to it
-nvm install
-nvm use 20
+nvm install 20.19.0
+nvm use 20.19.0
 ```
 
 Verify the active versions match what the project expects:
@@ -63,21 +54,19 @@ npm -v    # should print v10.8.2
 
 ## Step 2 - Installation
 
+Use the following command to install packages and dependencies.
+
 > **Node version:** 20.19.0 — managed via nvm (see Prerequisites above).
 
 ```bash
-# Clone the repository
-git clone <repo-url>
-cd react-portfolio-template
-
-# Use the following command to install packages and dependencies
 npm install --legacy-peer-deps
 ```
 
 ## Step 3 - Running the Application
 
+Use the following command to start the development server.
+
 ```bash
-# Start the development server
 npm run dev
 ```
 
@@ -88,7 +77,7 @@ Then open [http://localhost:3000](http://localhost:3000) in your browser.
 Before starting these tasks, please note the following:
 
 * You will complete the programming tasks **with the** ***use of Google AI Studio along with the features: text input-output, file upload, audio and stream live***.
-* You are free to **use any browser to search webs for help or solutions**.
+* You are free to  **use any browser to search the web for help or solutions, except web-based AI tools like ChatGPT or Gemini** .
 * Read all task instructions aloud completely before starting the task.
 * Keep your focus on meeting the requirements of the current task. Do not work ahead.
 
@@ -141,7 +130,7 @@ Follow the commands to push your code for Task 1 to the repository:
 
 ```
 git add .
-git commit -m "Task 1 - [Your Name]"
+git commit -m "Task 1"
 git push
 ```
 
@@ -185,7 +174,7 @@ Follow the commands to push your code for Task 2 to the repository:
 
 ```
 git add .
-git commit -m "Task 2 - [Your Name]"
+git commit -m "Task 2"
 git push
 ```
 
@@ -222,14 +211,10 @@ Follow the commands to push your code for Task 3 to the repository:
 
 ```
 git add .
-git commit -m "Task 3 - [Your Name]"
+git commit -m "Task 3"
 git push
 ```
 
 ## Credits
 
-This project is adapted from the open source [React Portfolio Template](https://github.com/chetanverma16/react-portfolio-template) originally created by [Chetan Verma](https://www.chetanverma.com/).
-
-- GitHub: [@chetanverma16](https://github.com/chetanverma16)
-- Live demo: [react-portfolio-template.netlify.app](https://react-portfolio-template.netlify.app)
-- Original tutorial: [How to build a portfolio website using Next.js and TailwindCSS](https://www.chetanverma.com/blog/how-to-build-a-portfolio-website-using-nextjs-and-tailwindcss)
+This project is adapted from the open source [React Portfolio Template](https://github.com/chetanverma16/react-portfolio-template) originally created by [Chetan Verma](https://www.chetanverma.com/) (GitHub: [@chetanverma16](https://github.com/chetanverma16))
