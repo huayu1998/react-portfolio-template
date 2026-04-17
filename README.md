@@ -34,9 +34,9 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
 
 **Windows**
 
-Download and run the latest installer from [nvm-windows releases](https://github.com/coreybutler/nvm-windows/releases) (`nvm-setup.exe`), then restart your terminal and verify with `nvm -v`.
+Download and run the latest installer from [nvm-windows releases](https://github.com/coreybutler/nvm-windows/releases) (`nvm-setup.exe`).
 
-Then restart your terminal and verify with `nvm -v`.
+Restart your terminal and verify with `nvm -v`.
 
 > **Step 1.2** - Install and use required Node.js version
 
