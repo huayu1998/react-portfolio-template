@@ -1,0 +1,42 @@
+.
+├── __mocks__                    # Jest mock fixtures and MSW request handlers for tests
+├── __tests__                    # All test files
+│   ├── blog.search.test.tsx     # Task 2: blog search functionality tests
+│   ├── blog.test.tsx
+│   └── home.test.tsx
+├── _posts                       # Markdown source files for blog posts
+├── animations                   # Mouse movement animations
+├── components                   # Reusable UI components
+├── data                         # Static data for home page, resume, and projects
+├── pages                        # Next.js page routes, API endpoints, and frontend rendering
+│   ├── api
+│   │   ├── blog
+│   │   │   ├── edit.js
+│   │   │   └── index.js         # Task 1: blog API data fetching endpoints (backend)
+│   │   └── portfolio.js
+│   ├── blog
+│   │   ├── [slug].js
+│   │   └── index.js             # Task 1: blog page rendering (frontend)
+│   ├── _app.js
+│   ├── edit.js
+│   ├── index.js
+│   └── resume.js
+├── public                       # Static assets such as images and icons
+├── styles                       # Global styles (Tailwind CSS and custom CSS)
+├── utils                        # Shared utility functions (API helpers, markdown parsing, etc.)
+├── # --- Configuration files for dependencies and environment setup---
+├── eslintrc.json
+├── jest.config.js
+├── jest.setup.js
+├── jsconfig.json
+├── next.config.js
+├── package-lock.json
+├── package.json
+├── postcss.config.js
+├── project_structure.txt
+├── README.md
+├── tailwind.config.js
+├── tsconfig.json
+└── yarn.lock
+
+25 directories, 62 files
